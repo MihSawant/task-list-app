@@ -24,7 +24,7 @@ export class TaskDashboardComponent implements OnInit {
       throw new Error("Input's should have some content");
     }
     this.task.emit(new Task(this.taskName, this.taskDescription));
-    
+    this.taskName = ''; this.taskDescription = '';  
   }
 
 }
