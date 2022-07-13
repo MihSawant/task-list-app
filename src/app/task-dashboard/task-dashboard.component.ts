@@ -10,6 +10,7 @@ import { Task } from '../shared/task.model';
 export class TaskDashboardComponent implements OnInit {
 
   @Output() task = new EventEmitter<Task>();
+  @Output() removeTask = new EventEmitter();
   taskName = '';
   taskDescription = '';
  
@@ -25,6 +26,10 @@ export class TaskDashboardComponent implements OnInit {
     }
     this.task.emit(new Task(this.taskName, this.taskDescription));
     this.taskName = ''; this.taskDescription = '';  
+  }
+
+  onRemoveTaskBtnClick(){
+    this.removeTask.emit();
   }
 
 }

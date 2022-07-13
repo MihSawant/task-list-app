@@ -5,7 +5,7 @@
     <div class="container">
         <div class="columns">
             <div class="column">
-                <app-task-dashboard (task)="onTaskAdded($event)"></app-task-dashboard>
+                <app-task-dashboard (task)="onTaskAdded($event)" (removeTask)="onTaskRemoved()"></app-task-dashboard>
             </div>
             <div class="column">
                 <app-task-list *ngFor="let tsk of taskList" [task]="tsk"></app-task-list>

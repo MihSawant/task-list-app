@@ -12,4 +12,8 @@ export class AppComponent {
   onTaskAdded(task: Task){
    this.taskList.push(task);
   }
+
+  onTaskRemoved(){
+    this.taskList.splice(0, 1);
+  }
 }
